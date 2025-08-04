@@ -1,0 +1,43 @@
+version: '3.8'
+services:
+  # 1. 以前からあるTypeScriptアプリケーションのサービス
+  app:
+    build: .
+    container_name: my-typescript-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    tty: true
+    # 2. データベース接続情報を環境変数としてアプリケーションに渡す
+    environment:
+      # ホスト名はサービス名'db'を指定
+      - DATABASE_URL=postgresql://myuser:mypassword@db:5432/mydatabase
+    # 3. 'db'サービスが起動してから'app'サービスが起動するように依存関係を設定
+    depends_on:
+      - db
+
+  # 4. 新しく追加するデータベースのサービス
+  db:
+    # 公式のPostgreSQLイメージを指定
+    image: postgres:15-alpine
+    container_name: my-postgres-db
+    # コンテナが停止した場合に常に再起動する
+    restart: always
+    # 5. データベースの認証情報などを環境変数で設定
+    environment:
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+      - POSTGRES_DB=mydatabase
+    # 6. ホストOSのポートとコンテナのポートをマッピング（任意）
+    # これにより、ホストからデータベース管理ツール(DBeaver, pgAdminなど)で接続できる
+    ports:
+      - "5432:5432"
+    # 7. データベースのデータを永続化するための設定
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+# 8. データベースのデータを保存する名前付きボリュームを定義
+volumes:
+  postgres-data:

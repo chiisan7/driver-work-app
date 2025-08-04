@@ -1,0 +1,59 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// 1. ユーザーテーブル
+model User {
+  id           Int      @id @default(autoincrement())
+  employeeCode String   @unique @map("employee_code")
+  password     String
+  name         String
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+  shifts       Shift[] // UserからShiftへのリレーション
+
+  @@map("users") // 実際のテーブル名を "users" にする
+}
+
+// 2. シフトテーブル
+model Shift {
+  id         Int      @id @default(autoincrement())
+  workDate   DateTime @db.Date @map("work_date")
+
+  // JSONの構造に合わせてフィールドを定義
+  startTime1 DateTime  @db.Time @map("start_time_1")
+  endTime1   DateTime  @db.Time @map("end_time_1")
+  startTime2 DateTime? @db.Time @map("start_time_2") // 中抜け勤務用（NULL許容）
+  endTime2   DateTime? @db.Time @map("end_time_2")   // 中抜け勤務用（NULL許容）
+
+  note       String?  @db.Text
+  isHoliday  Boolean  @map("is_holiday")
+  createdAt  DateTime @default(now()) @map("created_at")
+  updatedAt  DateTime @updatedAt @map("updated_at")
+  
+  // --- リレーション（関連付け） ---
+  userId    Int?     @map("user_id") // 運転士ID (NULL許容)
+  user      User?    @relation(fields: [userId], references: [id])
+  
+  routeId   Int      @map("route_id")
+  route     Route    @relation(fields: [routeId], references: [id])
+
+  @@map("shifts") // 実際のテーブル名を "shifts" にする
+}
+
+// 3. 路線マスターテーブル
+model Route {
+  id          Int      @id @default(autoincrement())
+  name        String   @unique // ← ここに @unique を追加します
+  description String?  @db.Text
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+  shifts      Shift[]
+
+  @@map("routes")
+}

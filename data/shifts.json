@@ -1,0 +1,1703 @@
+[
+  {
+    "dayType": "平日",
+    "routeName": "枝光",
+    "shiftNumber": "1",
+    "startTime1": "05:09",
+    "endTime1": "15:55",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "枝光",
+    "shiftNumber": "2",
+    "startTime1": "05:39",
+    "endTime1": "18:58",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "枝光",
+    "shiftNumber": "3",
+    "startTime1": "05:59",
+    "endTime1": "19:41",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "枝光",
+    "shiftNumber": "4",
+    "startTime1": "06:59",
+    "endTime1": "20:42",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "枝光",
+    "shiftNumber": "5",
+    "startTime1": "10:22",
+    "endTime1": "23:02",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "枝光",
+    "shiftNumber": "6T",
+    "startTime1": "06:20",
+    "endTime1": "10:02",
+    "startTime2": "14:53",
+    "endTime2": "21:08"
+  },
+  {
+    "dayType": "平日",
+    "routeName": "黒崎",
+    "shiftNumber": "1A",
+    "startTime1": "05:26",
+    "endTime1": "14:06",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "黒崎",
+    "shiftNumber": "1B",
+    "startTime1": "13:20",
+    "endTime1": "23:07",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "黒崎",
+    "shiftNumber": "2",
+    "startTime1": "05:38",
+    "endTime1": "15:21",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "黒崎",
+    "shiftNumber": "3",
+    "startTime1": "06:44",
+    "endTime1": "19:57",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "黒崎",
+    "shiftNumber": "4T",
+    "startTime1": "05:45",
+    "endTime1": "09:54",
+    "startTime2": "14:31",
+    "endTime2": "20:17"
+  },
+  {
+    "dayType": "平日",
+    "routeName": "黒崎",
+    "shiftNumber": "5T",
+    "startTime1": "05:50",
+    "endTime1": "11:50",
+    "startTime2": "16:53",
+    "endTime2": "20:32"
+  },
+  {
+    "dayType": "平日",
+    "routeName": "黒崎",
+    "shiftNumber": "6T",
+    "startTime1": "06:10",
+    "endTime1": "12:15",
+    "startTime2": "16:26",
+    "endTime2": "20:58"
+  },
+  {
+    "dayType": "平日",
+    "routeName": "黒崎",
+    "shiftNumber": "7T",
+    "startTime1": "06:45",
+    "endTime1": "10:06",
+    "startTime2": "15:01",
+    "endTime2": "21:32"
+  },
+  {
+    "dayType": "平日",
+    "routeName": "霧丘",
+    "shiftNumber": "1A",
+    "startTime1": "05:25",
+    "endTime1": "13:00",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "霧丘",
+    "shiftNumber": "1B",
+    "startTime1": "13:43",
+    "endTime1": "22:46",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "霧丘",
+    "shiftNumber": "2A",
+    "startTime1": "05:41",
+    "endTime1": "14:40",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "霧丘",
+    "shiftNumber": "2B",
+    "startTime1": "15:02",
+    "endTime1": "23:16",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "霧丘",
+    "shiftNumber": "3A",
+    "startTime1": "06:01",
+    "endTime1": "15:37",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "霧丘",
+    "shiftNumber": "3B",
+    "startTime1": "12:22",
+    "endTime1": "21:16",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "霧丘",
+    "shiftNumber": "4",
+    "startTime1": "06:50",
+    "endTime1": "19:49",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "霧丘",
+    "shiftNumber": "15A [AM]",
+    "startTime1": "05:00",
+    "endTime1": "13:40",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "霧丘",
+    "shiftNumber": "15B",
+    "startTime1": "14:03",
+    "endTime1": "20:52",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "霧丘",
+    "shiftNumber": "6T",
+    "startTime1": "06:13",
+    "endTime1": "11:16",
+    "startTime2": "15:46",
+    "endTime2": "20:38"
+  },
+  {
+    "dayType": "平日",
+    "routeName": "上重田",
+    "shiftNumber": "1",
+    "startTime1": "05:07",
+    "endTime1": "18:22",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "上重田",
+    "shiftNumber": "2",
+    "startTime1": "07:49",
+    "endTime1": "21:39",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "猪倉",
+    "shiftNumber": "1",
+    "startTime1": "05:30",
+    "endTime1": "19:29",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "猪倉",
+    "shiftNumber": "2T",
+    "startTime1": "06:33",
+    "endTime1": "12:03",
+    "startTime2": "15:40",
+    "endTime2": "21:01"
+  },
+  {
+    "dayType": "平日",
+    "routeName": "井堀",
+    "shiftNumber": "11A",
+    "startTime1": "05:49",
+    "endTime1": "14:19",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "井堀",
+    "shiftNumber": "11B[BM]",
+    "startTime1": "14:28",
+    "endTime1": "24:16",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "井堀",
+    "shiftNumber": "2",
+    "startTime1": "05:54",
+    "endTime1": "19:08",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "井堀",
+    "shiftNumber": "3",
+    "startTime1": "06:03",
+    "endTime1": "18:28",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "井堀",
+    "shiftNumber": "4",
+    "startTime1": "06:28",
+    "endTime1": "19:19",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "井堀",
+    "shiftNumber": "15A[整理]",
+    "startTime1": "05:00",
+    "endTime1": "12:59",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "井堀",
+    "shiftNumber": "15B(前食)",
+    "startTime1": "12:33",
+    "endTime1": "20:48",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "井堀",
+    "shiftNumber": "6",
+    "startTime1": "11:13",
+    "endTime1": "21:41",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "井堀",
+    "shiftNumber": "33T(前段後食)",
+    "startTime1": "06:03",
+    "endTime1": "09:18",
+    "startTime2": "16:44",
+    "endTime2": "19:19"
+  },
+  {
+    "dayType": "平日",
+    "routeName": "井堀",
+    "shiftNumber": "34",
+    "startTime1": "06:28",
+    "endTime1": "16:19",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "井堀",
+    "shiftNumber": "35(育児支援)",
+    "startTime1": "08:58",
+    "endTime1": "18:28",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "折尾",
+    "shiftNumber": "1A",
+    "startTime1": "04:39",
+    "endTime1": "14:45",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "折尾",
+    "shiftNumber": "1B",
+    "startTime1": "14:49",
+    "endTime1": "23:31",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "折尾",
+    "shiftNumber": "2A",
+    "startTime1": "05:22",
+    "endTime1": "13:15",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "折尾",
+    "shiftNumber": "2B",
+    "startTime1": "14:44",
+    "endTime1": "24:11",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "折尾",
+    "shiftNumber": "3A",
+    "startTime1": "06:03",
+    "endTime1": "14:35",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "折尾",
+    "shiftNumber": "3B",
+    "startTime1": "15:19",
+    "endTime1": "23:51",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "折尾",
+    "shiftNumber": "4T",
+    "startTime1": "05:04",
+    "endTime1": "08:49",
+    "startTime2": "12:55",
+    "endTime2": "19:08"
+  },
+  {
+    "dayType": "平日",
+    "routeName": "折尾",
+    "shiftNumber": "5T",
+    "startTime1": "05:39",
+    "endTime1": "08:27",
+    "startTime2": "13:10",
+    "endTime2": "20:04"
+  },
+  {
+    "dayType": "平日",
+    "routeName": "折尾",
+    "shiftNumber": "6T",
+    "startTime1": "06:51",
+    "endTime1": "12:09",
+    "startTime2": "16:10",
+    "endTime2": "21:40"
+  },
+  {
+    "dayType": "平日",
+    "routeName": "折尾",
+    "shiftNumber": "21(BRT)",
+    "startTime1": "06:09",
+    "endTime1": "19:26",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "折尾",
+    "shiftNumber": "22(BRT)",
+    "startTime1": "06:22",
+    "endTime1": "18:21",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "折尾",
+    "shiftNumber": "23(BRT)",
+    "startTime1": "06:29",
+    "endTime1": "18:42",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "折尾",
+    "shiftNumber": "24(BRT)",
+    "startTime1": "06:59",
+    "endTime1": "19:56",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "1A",
+    "startTime1": "05:09",
+    "endTime1": "15:20",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "1B",
+    "startTime1": "15:17",
+    "endTime1": "23:44",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "2",
+    "startTime1": "04:58",
+    "endTime1": "17:23",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "3",
+    "startTime1": "05:41",
+    "endTime1": "16:20",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "4",
+    "startTime1": "05:58",
+    "endTime1": "18:49",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "15A",
+    "startTime1": "06:08",
+    "endTime1": "13:20",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "15B[競輪]",
+    "startTime1": "13:43",
+    "endTime1": "19:38",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "6",
+    "startTime1": "06:48",
+    "endTime1": "19:55",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "7",
+    "startTime1": "11:11",
+    "endTime1": "23:07",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "8T",
+    "startTime1": "05:50",
+    "endTime1": "12:14",
+    "startTime2": "17:27",
+    "endTime2": "20:21"
+  },
+  {
+    "dayType": "平日",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "9T",
+    "startTime1": "06:21",
+    "endTime1": "10:03",
+    "startTime2": "15:27",
+    "endTime2": "20:46"
+  },
+  {
+    "dayType": "平日",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "10T",
+    "startTime1": "07:08",
+    "endTime1": "10:14",
+    "startTime2": "14:34",
+    "endTime2": "21:49"
+  },
+  {
+    "dayType": "平日",
+    "routeName": "中原",
+    "shiftNumber": "21",
+    "startTime1": "05:38",
+    "endTime1": "19:04",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "中原",
+    "shiftNumber": "22",
+    "startTime1": "06:39",
+    "endTime1": "20:04",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "中原",
+    "shiftNumber": "23T",
+    "startTime1": "04:49",
+    "endTime1": "11:50",
+    "startTime2": "16:15",
+    "endTime2": "19:12"
+  },
+  {
+    "dayType": "平日",
+    "routeName": "中原",
+    "shiftNumber": "24T",
+    "startTime1": "05:15",
+    "endTime1": "11:20",
+    "startTime2": "15:55",
+    "endTime2": "19:35"
+  },
+  {
+    "dayType": "平日",
+    "routeName": "黒原",
+    "shiftNumber": "21",
+    "startTime1": "05:18",
+    "endTime1": "15:24",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "黒原",
+    "shiftNumber": "22",
+    "startTime1": "05:28",
+    "endTime1": "18:32",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "黒原",
+    "shiftNumber": "23T",
+    "startTime1": "06:25",
+    "endTime1": "13:08",
+    "startTime2": "17:34",
+    "endTime2": "21:11"
+  },
+  {
+    "dayType": "平日",
+    "routeName": "フリー",
+    "shiftNumber": "",
+    "startTime1": "09:00",
+    "endTime1": "17:53",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "平日",
+    "routeName": "管理代務",
+    "shiftNumber": "",
+    "startTime1": "12:07",
+    "endTime1": "21:00",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "枝光",
+    "shiftNumber": "1A",
+    "startTime1": "05:12",
+    "endTime1": "15:04",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "枝光",
+    "shiftNumber": "1B",
+    "startTime1": "15:10",
+    "endTime1": "22:56",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "枝光",
+    "shiftNumber": "2",
+    "startTime1": "05:42",
+    "endTime1": "14:48",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "枝光",
+    "shiftNumber": "3",
+    "startTime1": "06:12",
+    "endTime1": "18:33",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "枝光",
+    "shiftNumber": "4",
+    "startTime1": "06:27",
+    "endTime1": "20:13",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "枝光",
+    "shiftNumber": "5",
+    "startTime1": "06:55",
+    "endTime1": "19:40",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "黒崎",
+    "shiftNumber": "1",
+    "startTime1": "05:31",
+    "endTime1": "18:21",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "黒崎",
+    "shiftNumber": "2",
+    "startTime1": "05:49",
+    "endTime1": "12:13",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "黒崎",
+    "shiftNumber": "3",
+    "startTime1": "06:11",
+    "endTime1": "19:01",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "黒崎",
+    "shiftNumber": "4",
+    "startTime1": "06:21",
+    "endTime1": "19:51",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "黒崎",
+    "shiftNumber": "5",
+    "startTime1": "06:53",
+    "endTime1": "20:17",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "霧丘",
+    "shiftNumber": "1A",
+    "startTime1": "05:32",
+    "endTime1": "13:59",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "霧丘",
+    "shiftNumber": "1B",
+    "startTime1": "15:02",
+    "endTime1": "23:18",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "霧丘",
+    "shiftNumber": "2",
+    "startTime1": "05:52",
+    "endTime1": "16:19",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "霧丘",
+    "shiftNumber": "13A(後食)",
+    "startTime1": "05:52",
+    "endTime1": "13:44",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "霧丘",
+    "shiftNumber": "13B[競輪](前食)",
+    "startTime1": "12:37",
+    "endTime1": "19:45",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "霧丘",
+    "shiftNumber": "4",
+    "startTime1": "07:04",
+    "endTime1": "20:34",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "霧丘",
+    "shiftNumber": "5",
+    "startTime1": "08:34",
+    "endTime1": "20:48",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "霧丘",
+    "shiftNumber": "6",
+    "startTime1": "12:17",
+    "endTime1": "22:48",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "上重田",
+    "shiftNumber": "1",
+    "startTime1": "05:07",
+    "endTime1": "18:22",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "上重田",
+    "shiftNumber": "2",
+    "startTime1": "07:49",
+    "endTime1": "21:37",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "猪倉",
+    "shiftNumber": "1",
+    "startTime1": "05:30",
+    "endTime1": "19:29",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "猪倉",
+    "shiftNumber": "2T",
+    "startTime1": "06:33",
+    "endTime1": "12:03",
+    "startTime2": "15:40",
+    "endTime2": "21:01"
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "井堀",
+    "shiftNumber": "1",
+    "startTime1": "05:49",
+    "endTime1": "17:47",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "井堀",
+    "shiftNumber": "2",
+    "startTime1": "06:11",
+    "endTime1": "18:17",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "井堀",
+    "shiftNumber": "3",
+    "startTime1": "06:23",
+    "endTime1": "19:21",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "井堀",
+    "shiftNumber": "4",
+    "startTime1": "06:41",
+    "endTime1": "20:01",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "井堀",
+    "shiftNumber": "15A[整理]",
+    "startTime1": "05:00",
+    "endTime1": "12:47",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "井堀",
+    "shiftNumber": "15B",
+    "startTime1": "12:42",
+    "endTime1": "20:57",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "折尾",
+    "shiftNumber": "1A",
+    "startTime1": "05:15",
+    "endTime1": "13:21",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "折尾",
+    "shiftNumber": "1B",
+    "startTime1": "13:36",
+    "endTime1": "23:19",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "折尾",
+    "shiftNumber": "2A",
+    "startTime1": "05:29",
+    "endTime1": "13:41",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "折尾",
+    "shiftNumber": "2B",
+    "startTime1": "14:36",
+    "endTime1": "23:49",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "折尾",
+    "shiftNumber": "3",
+    "startTime1": "04:59",
+    "endTime1": "13:44",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "折尾",
+    "shiftNumber": "4",
+    "startTime1": "05:44",
+    "endTime1": "19:05",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "折尾",
+    "shiftNumber": "5T",
+    "startTime1": "06:10",
+    "endTime1": "10:15",
+    "startTime2": "14:37",
+    "endTime2": "20:55"
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "折尾",
+    "shiftNumber": "6T",
+    "startTime1": "06:55",
+    "endTime1": "11:55",
+    "startTime2": "16:17",
+    "endTime2": "21:39"
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "折尾",
+    "shiftNumber": "21(BRT)",
+    "startTime1": "06:19",
+    "endTime1": "18:05",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "折尾",
+    "shiftNumber": "22(BRT)",
+    "startTime1": "06:38",
+    "endTime1": "17:50",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "折尾",
+    "shiftNumber": "23(BRT)",
+    "startTime1": "06:39",
+    "endTime1": "18:45",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "折尾",
+    "shiftNumber": "24(BRT)",
+    "startTime1": "07:09",
+    "endTime1": "19:24",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "1A",
+    "startTime1": "05:33",
+    "endTime1": "13:47",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "1B",
+    "startTime1": "13:39",
+    "endTime1": "23:08",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "2",
+    "startTime1": "05:38",
+    "endTime1": "14:25",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "3",
+    "startTime1": "05:54",
+    "endTime1": "19:15",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "4",
+    "startTime1": "06:29",
+    "endTime1": "19:35",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "15A[AM]",
+    "startTime1": "05:00",
+    "endTime1": "12:25",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "15B[BM]",
+    "startTime1": "12:41",
+    "endTime1": "23:54",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "6",
+    "startTime1": "12:06",
+    "endTime1": "22:09",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "7",
+    "startTime1": "10:22",
+    "endTime1": "22:28",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "8T",
+    "startTime1": "06:42",
+    "endTime1": "11:43",
+    "startTime2": "15:59",
+    "endTime2": "21:24"
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "中原",
+    "shiftNumber": "21",
+    "startTime1": "05:13",
+    "endTime1": "15:37",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "中原",
+    "shiftNumber": "22",
+    "startTime1": "05:54",
+    "endTime1": "19:02",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "中原",
+    "shiftNumber": "23",
+    "startTime1": "06:48",
+    "endTime1": "20:55",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "黒原",
+    "shiftNumber": "21A",
+    "startTime1": "07:24",
+    "endTime1": "14:39",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "黒原",
+    "shiftNumber": "21B",
+    "startTime1": "14:43",
+    "endTime1": "23:47",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "黒原",
+    "shiftNumber": "22",
+    "startTime1": "05:48",
+    "endTime1": "15:49",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "黒原",
+    "shiftNumber": "23",
+    "startTime1": "06:13",
+    "endTime1": "19:37",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "フリー",
+    "shiftNumber": "",
+    "startTime1": "09:00",
+    "endTime1": "17:53",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "土曜",
+    "routeName": "管理代務",
+    "shiftNumber": "",
+    "startTime1": "12:07",
+    "endTime1": "21:00",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "枝光",
+    "shiftNumber": "1A",
+    "startTime1": "05:14",
+    "endTime1": "14:32",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "枝光",
+    "shiftNumber": "1B",
+    "startTime1": "15:12",
+    "endTime1": "22:57",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "枝光",
+    "shiftNumber": "2",
+    "startTime1": "05:39",
+    "endTime1": "15:22",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "枝光",
+    "shiftNumber": "3",
+    "startTime1": "06:04",
+    "endTime1": "19:22",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "枝光",
+    "shiftNumber": "4",
+    "startTime1": "06:23",
+    "endTime1": "18:32",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "枝光",
+    "shiftNumber": "5",
+    "startTime1": "07:21",
+    "endTime1": "20:01",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "黒崎",
+    "shiftNumber": "1",
+    "startTime1": "05:31",
+    "endTime1": "18:21",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "黒崎",
+    "shiftNumber": "2",
+    "startTime1": "05:55",
+    "endTime1": "19:05",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "黒崎",
+    "shiftNumber": "3",
+    "startTime1": "06:10",
+    "endTime1": "18:55",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "黒崎",
+    "shiftNumber": "4",
+    "startTime1": "06:35",
+    "endTime1": "19:59",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "黒崎",
+    "shiftNumber": "5",
+    "startTime1": "07:35",
+    "endTime1": "20:46",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "霧丘",
+    "shiftNumber": "1",
+    "startTime1": "05:39",
+    "endTime1": "17:38",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "霧丘",
+    "shiftNumber": "2",
+    "startTime1": "06:19",
+    "endTime1": "19:12",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "霧丘",
+    "shiftNumber": "3",
+    "startTime1": "06:30",
+    "endTime1": "19:52",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "霧丘",
+    "shiftNumber": "4",
+    "startTime1": "09:56",
+    "endTime1": "22:45",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "霧丘",
+    "shiftNumber": "5",
+    "startTime1": "11:16",
+    "endTime1": "22:15",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "霧丘",
+    "shiftNumber": "11T(前段後食)",
+    "startTime1": "06:19",
+    "endTime1": "10:57",
+    "startTime2": "16:05",
+    "endTime2": "19:12"
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "霧丘",
+    "shiftNumber": "12(育児支援)",
+    "startTime1": "10:19",
+    "endTime1": "15:34",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "上重田",
+    "shiftNumber": "1",
+    "startTime1": "05:07",
+    "endTime1": "18:22",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "上重田",
+    "shiftNumber": "2",
+    "startTime1": "07:49",
+    "endTime1": "21:27",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "猪倉",
+    "shiftNumber": "1",
+    "startTime1": "06:13",
+    "endTime1": "19:29",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "猪倉",
+    "shiftNumber": "2T",
+    "startTime1": "06:33",
+    "endTime1": "12:03",
+    "startTime2": "15:40",
+    "endTime2": "21:01"
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "井堀",
+    "shiftNumber": "1",
+    "startTime1": "06:53",
+    "endTime1": "19:10",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "井堀",
+    "shiftNumber": "2",
+    "startTime1": "07:33",
+    "endTime1": "20:10",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "折尾",
+    "shiftNumber": "1A",
+    "startTime1": "05:23",
+    "endTime1": "14:41",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "折尾",
+    "shiftNumber": "1B",
+    "startTime1": "15:29",
+    "endTime1": "23:42",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "折尾",
+    "shiftNumber": "2A",
+    "startTime1": "05:39",
+    "endTime1": "14:31",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "折尾",
+    "shiftNumber": "2B",
+    "startTime1": "14:46",
+    "endTime1": "23:07",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "折尾",
+    "shiftNumber": "3",
+    "startTime1": "05:09",
+    "endTime1": "17:34",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "折尾",
+    "shiftNumber": "14A[整理]",
+    "startTime1": "05:00",
+    "endTime1": "13:01",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "折尾",
+    "shiftNumber": "14B[競輪](前食)",
+    "startTime1": "12:41",
+    "endTime1": "19:05",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "折尾",
+    "shiftNumber": "15A[AM]",
+    "startTime1": "05:00",
+    "endTime1": "14:11",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "折尾",
+    "shiftNumber": "15B[BM](前食)",
+    "startTime1": "13:41",
+    "endTime1": "23:50",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "折尾",
+    "shiftNumber": "21(BRT)",
+    "startTime1": "06:19",
+    "endTime1": "17:35",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "折尾",
+    "shiftNumber": "22(BRT)",
+    "startTime1": "06:49",
+    "endTime1": "18:35",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "折尾",
+    "shiftNumber": "23(BRT)",
+    "startTime1": "07:49",
+    "endTime1": "19:35",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "折尾",
+    "shiftNumber": "24(BRT)",
+    "startTime1": "09:19",
+    "endTime1": "20:33",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "1A",
+    "startTime1": "05:42",
+    "endTime1": "14:22",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "1B",
+    "startTime1": "14:41",
+    "endTime1": "23:11",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "2",
+    "startTime1": "05:33",
+    "endTime1": "15:51",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "3",
+    "startTime1": "05:53",
+    "endTime1": "19:17",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "4",
+    "startTime1": "06:29",
+    "endTime1": "18:45",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "5",
+    "startTime1": "06:52",
+    "endTime1": "20:15",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "6",
+    "startTime1": "09:36",
+    "endTime1": "22:09",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "7",
+    "startTime1": "12:13",
+    "endTime1": "22:21",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "鞘ヶ谷",
+    "shiftNumber": "8T",
+    "startTime1": "06:47",
+    "endTime1": "11:39",
+    "startTime2": "15:55",
+    "endTime2": "21:20"
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "中原",
+    "shiftNumber": "21",
+    "startTime1": "06:41",
+    "endTime1": "18:21",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "中原",
+    "shiftNumber": "22",
+    "startTime1": "07:05",
+    "endTime1": "19:29",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "中原",
+    "shiftNumber": "23",
+    "startTime1": "07:19",
+    "endTime1": "20:17",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "中原",
+    "shiftNumber": "24",
+    "startTime1": "07:59",
+    "endTime1": "20:15",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "黒原",
+    "shiftNumber": "21A",
+    "startTime1": "05:21",
+    "endTime1": "12:16",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "黒原",
+    "shiftNumber": "21B",
+    "startTime1": "14:13",
+    "endTime1": "23:45",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "黒原",
+    "shiftNumber": "22",
+    "startTime1": "04:49",
+    "endTime1": "18:00",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "黒原",
+    "shiftNumber": "23",
+    "startTime1": "06:01",
+    "endTime1": "18:21",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "フリー",
+    "shiftNumber": "",
+    "startTime1": "09:00",
+    "endTime1": "17:53",
+    "startTime2": null,
+    "endTime2": null
+  },
+  {
+    "dayType": "日祝",
+    "routeName": "管理代務",
+    "shiftNumber": "",
+    "startTime1": "12:07",
+    "endTime1": "21:00",
+    "startTime2": null,
+    "endTime2": null
+  }
+]
