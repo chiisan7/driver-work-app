@@ -1,3 +1,6 @@
+-- CreateEnum
+CREATE TYPE "public"."DayCategory" AS ENUM ('WEEKDAY', 'SATURDAY', 'HOLIDAY');
+
 -- CreateTable
 CREATE TABLE "public"."users" (
     "id" SERIAL NOT NULL,
@@ -18,8 +21,9 @@ CREATE TABLE "public"."shifts" (
     "end_time_1" TIME NOT NULL,
     "start_time_2" TIME,
     "end_time_2" TIME,
+    "day_category" "public"."DayCategory" NOT NULL,
+    "shift_number" TEXT NOT NULL,
     "note" TEXT,
-    "is_holiday" BOOLEAN NOT NULL,
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updated_at" TIMESTAMP(3) NOT NULL,
     "user_id" INTEGER,

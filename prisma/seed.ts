@@ -1,13 +1,16 @@
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient, DayCategory } from '@prisma/client';
 import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
 
+// Prismaクライアントをインスタンス化
 const prisma = new PrismaClient();
 
+// --- ESMモードで __dirname を使うための準備 ---
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// --- JSONデータの型定義 ---
 interface ShiftData {
   dayType: string;
   routeName: string;
@@ -48,7 +51,11 @@ async function main() {
 
   // --- 1. 路線マスターの登録 ---
   console.log('Step 1: Seeding routes...');
-  const routeNames = [ '枝光', '黒崎', '霧丘', '上重田', '猪倉', '井堀', '折尾', '鞘ヶ谷', '中原', '黒原', 'フリー', '管理代務' ];
+  const routeNames = [
+    '枝光', '黒崎', '霧丘', '上重田', '猪倉',
+    '井堀', '折尾', '鞘ヶ谷', '中原', '黒原',
+    'フリー', '管理代務'
+  ];
   for (const name of routeNames) {
     await prisma.route.upsert({
       where: { name: name },
@@ -62,13 +69,18 @@ async function main() {
   console.log('Step 2: Seeding shift templates...');
   const jsonPath = path.join(__dirname, '..', 'data', 'shifts.json');
   console.log(`Reading shift data from: ${jsonPath}`);
-  
+
   if (!fs.existsSync(jsonPath)) {
     console.error('ERROR: shifts.json file not found!');
     return;
   }
   const shiftsData: ShiftData[] = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
   console.log(`Successfully read ${shiftsData.length} shift records.`);
+
+  if (shiftsData.length === 0) {
+    console.warn('WARNING: No shift data to seed.');
+    return;
+  }
 
   const templateDate = new Date('1970-01-01');
   let createdCount = 0;
@@ -80,7 +92,21 @@ async function main() {
       continue;
     }
 
-    // ★★★ 24時対応のヘルパー関数を使ってデータを登録 ★★★
+    // JSONの文字列をDayCategory Enumに変換する
+    let category: DayCategory;
+    switch (shift.dayType) {
+      case '土曜':
+        category = 'SATURDAY';
+        break;
+      case '日祝':
+        category = 'HOLIDAY';
+        break;
+      default: // '平日'やその他の場合はWEEKDAYとする
+        category = 'WEEKDAY';
+        break;
+    }
+
+    // 新しいスキーマに合わせてデータを登録
     await prisma.shift.create({
       data: {
         workDate: templateDate,
@@ -88,9 +114,13 @@ async function main() {
         endTime1:   createDateWithNextDaySupport(templateDate, shift.endTime1)!,
         startTime2: createDateWithNextDaySupport(templateDate, shift.startTime2),
         endTime2:   createDateWithNextDaySupport(templateDate, shift.endTime2),
+
+        // 新しいカラムにデータを格納
+        dayCategory: category,
+        shiftNumber: shift.shiftNumber,
+        note: null, // noteは空にする
+
         route: { connect: { id: route.id } },
-        note: `乗番: ${shift.shiftNumber}, 曜日: ${shift.dayType}`,
-        isHoliday: shift.dayType !== '平日',
       },
     });
     createdCount++;

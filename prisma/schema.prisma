@@ -7,6 +7,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum DayCategory {
+  WEEKDAY   // 平日
+  SATURDAY  // 土曜
+  HOLIDAY   // 日祝
+}
+
 // 1. ユーザーテーブル
 model User {
   id           Int      @id @default(autoincrement())
@@ -22,28 +28,23 @@ model User {
 
 // 2. シフトテーブル
 model Shift {
-  id         Int      @id @default(autoincrement())
-  workDate   DateTime @db.Date @map("work_date")
+  id          Int      @id @default(autoincrement())
+  workDate    DateTime @db.Date @map("work_date")
+  startTime1  DateTime @db.Time @map("start_time_1")
+  endTime1    DateTime @db.Time @map("end_time_1")
+  startTime2  DateTime? @db.Time @map("start_time_2")
+  endTime2    DateTime? @db.Time @map("end_time_2")
+  dayCategory DayCategory @map("day_category") // ← ここ
+  shiftNumber String   @map("shift_number")
+  note        String?  @db.Text
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
 
-  // JSONの構造に合わせてフィールドを定義
-  startTime1 DateTime  @db.Time @map("start_time_1")
-  endTime1   DateTime  @db.Time @map("end_time_1")
-  startTime2 DateTime? @db.Time @map("start_time_2") // 中抜け勤務用（NULL許容）
-  endTime2   DateTime? @db.Time @map("end_time_2")   // 中抜け勤務用（NULL許容）
-
-  note       String?  @db.Text
-  isHoliday  Boolean  @map("is_holiday")
-  createdAt  DateTime @default(now()) @map("created_at")
-  updatedAt  DateTime @updatedAt @map("updated_at")
-  
-  // --- リレーション（関連付け） ---
-  userId    Int?     @map("user_id") // 運転士ID (NULL許容)
-  user      User?    @relation(fields: [userId], references: [id])
-  
-  routeId   Int      @map("route_id")
-  route     Route    @relation(fields: [routeId], references: [id])
-
-  @@map("shifts") // 実際のテーブル名を "shifts" にする
+  userId      Int?     @map("user_id")
+  user        User?    @relation(fields: [userId], references: [id])
+  routeId     Int      @map("route_id")
+  route       Route    @relation(fields: [routeId], references: [id])
+  @@map("shifts")
 }
 
 // 3. 路線マスターテーブル
