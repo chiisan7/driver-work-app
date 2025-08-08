@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "db:seed:templates": "node --loader ts-node/esm prisma/seedTemplates.ts",
+    "db:generate:shifts": "node --loader ts-node/esm scripts/generateShifts.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.13.0",
@@ -21,6 +23,5 @@
     "vite": "^6.2.0"
   },
   "prisma": {
-    "seed": "node --loader ts-node/esm prisma/seed.ts"
   }
 }

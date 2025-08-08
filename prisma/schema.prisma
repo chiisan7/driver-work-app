@@ -15,37 +15,48 @@ enum DayCategory {
 
 // 1. ユーザーテーブル
 model User {
-  id           Int      @id @default(autoincrement())
-  employeeCode String   @unique @map("employee_code")
-  password     String
-  name         String
-  createdAt    DateTime @default(now()) @map("created_at")
-  updatedAt    DateTime @updatedAt @map("updated_at")
-  shifts       Shift[] // UserからShiftへのリレーション
+  id             Int      @id @default(autoincrement())
+  employeeCode   String   @unique @map("employee_code")
+  password       String
+  name           String
+  
+  rotaId         Int?     @map("rota_id") // どの輪番グループか
+  rota           Rota?    @relation(fields: [rotaId], references: [id])
+  
+  // ユーザーごとの輪番サイクルの開始状態を保存
+  initialRotaPosition Int? @map("initial_rota_position") // 最初のポジション
+  initialRotaDate     DateTime? @db.Date @map("initial_rota_date") // そのポジションを開始した日付
 
-  @@map("users") // 実際のテーブル名を "users" にする
+  assignedShifts Shift[]  @relation("assignedShifts") // Shiftモデル側のリレーション名を指定
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt      DateTime @updatedAt @map("updated_at")
+
+  @@map("users")
 }
 
 // 2. シフトテーブル
 model Shift {
-  id          Int      @id @default(autoincrement())
-  workDate    DateTime @db.Date @map("work_date")
-  startTime1  DateTime @db.Time @map("start_time_1")
-  endTime1    DateTime @db.Time @map("end_time_1")
-  startTime2  DateTime? @db.Time @map("start_time_2")
-  endTime2    DateTime? @db.Time @map("end_time_2")
-  dayCategory DayCategory @map("day_category") // ← ここ
+  id         Int      @id @default(autoincrement())
+  workDate   DateTime @db.Date @map("work_date")
+  dayCategory DayCategory @map("day_category")
+  
+  startTime1 DateTime  @db.Time @map("start_time_1")
+  endTime1   DateTime  @db.Time @map("end_time_1")
+  startTime2 DateTime? @db.Time @map("start_time_2")
+  endTime2   DateTime? @db.Time @map("end_time_2")
+  
   shiftNumber String   @map("shift_number")
-  note        String?  @db.Text
-  createdAt   DateTime @default(now()) @map("created_at")
-  updatedAt   DateTime @updatedAt @map("updated_at")
+  note       String?  @db.Text
+  
+  userId    Int?     @map("user_id")
+  user      User?    @relation(fields: [userId], references: [id], name: "assignedShifts") // リレーション名を指定
 
-  userId      Int?     @map("user_id")
-  user        User?    @relation(fields: [userId], references: [id])
-  routeId     Int      @map("route_id")
-  route       Route    @relation(fields: [routeId], references: [id])
+  routeId   Int?     @map("route_id") // 割り当て時にテンプレートからコピー
+  route     Route?   @relation(fields: [routeId], references: [id])
+
   @@map("shifts")
 }
+
 
 // 3. 路線マスターテーブル
 model Route {
@@ -57,4 +68,32 @@ model Route {
   shifts      Shift[]
 
   @@map("routes")
+}
+
+// 4. 輪番グループテーブル
+model Rota {
+  id   Int @id @default(autoincrement())
+  name String @unique // 例: "1週目"
+  users     User[]
+  templates ShiftTemplate[]
+
+  @@map("rotas")
+}
+
+// 2. 輪番表の「１マス」にあたるシフトテンプレートを定義
+model ShiftTemplate {
+  id           Int      @id @default(autoincrement())
+  rotaId       Int      @map("rota_id")
+  rota         Rota     @relation(fields: [rotaId], references: [id])
+  
+  dayCategory  DayCategory @map("day_category") // WEEKDAY, SATURDAY, HOLIDAY
+  rotaPosition Int      @map("rota_position") // 1〜7 のポジション番号
+
+  shiftName    String   // 例: "枝光5", "フリー", "週休"
+  startTime    DateTime? @db.Time // 休みの場合もあるのでNULL許容
+  endTime      DateTime? @db.Time // 休みの場合もあるのでNULL許容
+  isDayOff     Boolean  @default(false) @map("is_day_off")
+
+  @@unique([rotaId, dayCategory, rotaPosition]) // 同じ輪番・曜日・ポジションの組み合わせは一つだけ
+  @@map("shift_templates")
 }

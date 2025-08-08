@@ -1,0 +1,23 @@
+[
+  { "dayCategory": "WEEKDAY", "rotaPosition": 1, "shiftName": "枝光5", "startTime": "10:22", "endTime": "23:02", "isDayOff": false },
+  { "dayCategory": "WEEKDAY", "rotaPosition": 2, "shiftName": "折尾1B", "startTime": "14:49", "endTime": "23:31", "isDayOff": false },
+  { "dayCategory": "WEEKDAY", "rotaPosition": 3, "shiftName": "鞘ヶ谷1B", "startTime": "15:17", "endTime": "23:44", "isDayOff": false },
+  { "dayCategory": "WEEKDAY", "rotaPosition": 4, "shiftName": "霧丘2B", "startTime": "15:02", "endTime": "23:16", "isDayOff": false },
+  { "dayCategory": "WEEKDAY", "rotaPosition": 5, "shiftName": "鞘ヶ谷15B【競輪】", "startTime": "13:43", "endTime": "19:38", "isDayOff": false },
+  { "dayCategory": "WEEKDAY", "rotaPosition": 6, "shiftName": "週休", "startTime": null, "endTime": null, "isDayOff": true },
+  { "dayCategory": "WEEKDAY", "rotaPosition": 7, "shiftName": "公休", "startTime": null, "endTime": null, "isDayOff": true },
+  { "dayCategory": "SATURDAY", "rotaPosition": 1, "shiftName": "フリー", "startTime": "09:00", "endTime": "17:53", "isDayOff": false },
+  { "dayCategory": "SATURDAY", "rotaPosition": 2, "shiftName": "フリー", "startTime": "09:00", "endTime": "17:53", "isDayOff": false },
+  { "dayCategory": "SATURDAY", "rotaPosition": 3, "shiftName": "折尾1B", "startTime": "13:36", "endTime": "23:19", "isDayOff": false },
+  { "dayCategory": "SATURDAY", "rotaPosition": 4, "shiftName": "枝光1B", "startTime": "15:10", "endTime": "22:56", "isDayOff": false },
+  { "dayCategory": "SATURDAY", "rotaPosition": 5, "shiftName": "霧丘13B【競輪】(前食)", "startTime": "12:37", "endTime": "19:45", "isDayOff": false },
+  { "dayCategory": "SATURDAY", "rotaPosition": 6, "shiftName": "週休", "startTime": null, "endTime": null, "isDayOff": true },
+  { "dayCategory": "SATURDAY", "rotaPosition": 7, "shiftName": "公休", "startTime": null, "endTime": null, "isDayOff": true },
+  { "dayCategory": "HOLIDAY", "rotaPosition": 1, "shiftName": "フリー", "startTime": "09:00", "endTime": "17:53", "isDayOff": false },
+  { "dayCategory": "HOLIDAY", "rotaPosition": 2, "shiftName": "フリー", "startTime": "09:00", "endTime": "17:53", "isDayOff": false },
+  { "dayType": "HOLIDAY", "rotaPosition": 3, "shiftName": "折尾1B", "startTime": "15:29", "endTime": "23:42", "isDayOff": false },
+  { "dayType": "HOLIDAY", "rotaPosition": 4, "shiftName": "枝光1B", "startTime": "15:12", "endTime": "22:57", "isDayOff": false },
+  { "dayType": "HOLIDAY", "rotaPosition": 5, "shiftName": "折尾14B【競輪】(前食)", "startTime": "12:41", "endTime": "19:05", "isDayOff": false },
+  { "dayCategory": "HOLIDAY", "rotaPosition": 6, "shiftName": "週休", "startTime": null, "endTime": null, "isDayOff": true },
+  { "dayCategory": "HOLIDAY", "rotaPosition": 7, "shiftName": "公休", "startTime": null, "endTime": null, "isDayOff": true }
+]
