@@ -1,27 +1,27 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import { User, ShiftWithDetails } from '../types';
-import { api } from '../services/api';
 import Header from './Header';
 import Calendar from './Calendar';
 import ShiftDetailsModal from './ShiftDetailsModal';
 import { ClockIcon, RouteIcon, BusIcon, NoteIcon } from './icons';
+import { useShifts } from '../hooks/useShifts';
 
 interface DashboardProps {
   user: User;
   onLogout: () => void;
 }
 
-const TodayShiftCard: React.FC<{ shift: ShiftWithDetails | null, isLoading: boolean, onClick: () => void }> = ({ shift, isLoading, onClick }) => {
+const DetailItem: React.FC<{ icon: React.ReactNode; label: string; value: string | React.ReactNode}> = ({ icon, label, value }) => (
+    <div className="flex items-center space-x-3 text-sm">
+        <div className="flex-shrink-0 w-5 h-5 text-gray-500">{icon}</div>
+        <span className="font-medium text-gray-600 w-20">{label}</span>
+        <span className="text-gray-800 font-semibold">{value}</span>
+    </div>
+);
+
+const TodayShiftCard: React.FC<{ shift: ShiftWithDetails | null, isLoading: boolean, onClick: () => void }> = React.memo(({ shift, isLoading, onClick }) => {
     const today = new Date();
     const formattedDate = new Intl.DateTimeFormat('ja-JP', { month: 'long', day: 'numeric', weekday: 'short' }).format(today);
-
-    const DetailItem: React.FC<{ icon: React.ReactNode; label: string; value: string | React.ReactNode}> = ({ icon, label, value }) => (
-        <div className="flex items-center space-x-3 text-sm">
-            <div className="flex-shrink-0 w-5 h-5 text-gray-500">{icon}</div>
-            <span className="font-medium text-gray-600 w-20">{label}</span>
-            <span className="text-gray-800 font-semibold">{value}</span>
-        </div>
-    );
 
     return (
         <div className="bg-white rounded-lg shadow-lg p-6 mb-6 cursor-pointer hover:shadow-xl transition-shadow" onClick={onClick}>
@@ -52,49 +52,21 @@ const TodayShiftCard: React.FC<{ shift: ShiftWithDetails | null, isLoading: bool
             )}
         </div>
     );
-};
+});
 
 const Dashboard: React.FC<DashboardProps> = ({ user, onLogout }) => {
-  const [currentDate, setCurrentDate] = useState(new Date());
-  const [shifts, setShifts] = useState<ShiftWithDetails[]>([]);
-  const [isCalendarLoading, setCalendarLoading] = useState(true);
-  const [todayShift, setTodayShift] = useState<ShiftWithDetails | null>(null);
-  const [isTodayShiftLoading, setTodayShiftLoading] = useState(true);
+  const {
+    currentDate,
+    setCurrentDate,
+    shifts,
+    todayShift,
+    isTodayShiftLoading,
+  } = useShifts(user);
+
   const [selectedShift, setSelectedShift] = useState<ShiftWithDetails | null>(null);
   const [selectedDateForModal, setSelectedDateForModal] = useState<Date | null>(null);
 
-  const fetchCalendarShifts = useCallback(() => {
-    setCalendarLoading(true);
-    const year = currentDate.getFullYear();
-    const month = currentDate.getMonth();
-    api.getShiftsForMonth(user.id, year, month)
-      .then(setShifts)
-      .catch(console.error)
-      .finally(() => setCalendarLoading(false));
-  }, [user.id, currentDate]);
-
-  useEffect(() => {
-    api.getShiftForDate(user.id, new Date())
-      .then(shift => {
-        if (shift) {
-          setTodayShift(shift);
-        } else {
-          setTodayShift({
-            id: 0, user_id: user.id, work_date: new Date().toISOString().split('T')[0], is_holiday: true,
-            start_time: null, end_time: null, route_id: null, vehicle_id: null, note: null,
-            route: null, vehicle: null
-          });
-        }
-      })
-      .catch(console.error)
-      .finally(() => setTodayShiftLoading(false));
-  }, [user.id]);
-
-  useEffect(() => {
-    fetchCalendarShifts();
-  }, [fetchCalendarShifts]);
-
-  const handleDateClick = (date: Date) => {
+  const handleDateClick = useCallback((date: Date) => {
     const dateString = date.toISOString().split('T')[0];
     const shiftForDay = shifts.find(s => s.work_date === dateString);
     if (shiftForDay) {
@@ -109,19 +81,19 @@ const Dashboard: React.FC<DashboardProps> = ({ user, onLogout }) => {
         setSelectedShift(tempHolidayShift);
         setSelectedDateForModal(date);
     }
-  };
+  }, [shifts, user.id]);
 
-  const handleTodayCardClick = () => {
+  const handleTodayCardClick = useCallback(() => {
     if(todayShift) {
         setSelectedShift(todayShift);
         setSelectedDateForModal(new Date());
     }
-  };
+  }, [todayShift]);
 
-  const handleCloseModal = () => {
+  const handleCloseModal = useCallback(() => {
     setSelectedShift(null);
     setSelectedDateForModal(null);
-  };
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-100">
