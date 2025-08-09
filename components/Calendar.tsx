@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
-import { ShiftWithDetails } from '../types';
-import { ChevronLeftIcon, ChevronRightIcon, DownloadIcon } from './icons';
+import { ShiftWithDetails } from '../types.js';
+import { ChevronLeftIcon, ChevronRightIcon, DownloadIcon } from './icons.js';
 
 interface CalendarProps {
   currentDate: Date;
@@ -64,7 +64,6 @@ const Calendar: React.FC<CalendarProps> = ({ currentDate, setCurrentDate, shifts
                 '勤務',
                 `${shift.start_time || ''} - ${shift.end_time || ''}`,
                 escapeCSV(shift.route?.name),
-                escapeCSV(shift.vehicle?.vehicle_number),
                 escapeCSV(shift.note)
             );
         } else {

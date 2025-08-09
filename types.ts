@@ -1,35 +1,40 @@
+// =======================================================
+// このファイルがプロジェクト唯一の型定義の正となります
+// =======================================================
+
+export type DayCategory = 'WEEKDAY' | 'SATURDAY' | 'HOLIDAY';
 
 export interface User {
   id: number;
-  employee_code: string;
   name: string;
+  employeeCode: string;
 }
 
 export interface Route {
   id: number;
-  name: string;
-  description: string;
+  name:string;
 }
 
-export interface Vehicle {
-  id: number;
-  vehicle_number: string;
-  model: string;
-}
+// Vehicle（車両）の概念は完全に削除します
 
-export interface Shift {
+export interface ShiftWithDetails {
+  // --- 必須プロパティ ---
   id: number;
-  user_id: number;
-  work_date: string; // YYYY-MM-DD
-  start_time: string | null; // HH:mm
-  end_time: string | null; // HH:mm
-  route_id: number | null;
-  vehicle_id: number | null;
+  workDate: string;
+  dayCategory: DayCategory;
+  shiftNumber: string;
   note: string | null;
-  is_holiday: boolean;
-}
 
-export interface ShiftWithDetails extends Shift {
+  // --- 時刻関連 ---
+  startTime1: string | null;
+  endTime1: string | null;
+  startTime2: string | null;
+  endTime2: string | null;
+  
+  // --- 関連ID ---
+  userId: number | null;
+  routeId: number | null;
+  
+  // --- 関連オブジェクト ---
   route: Route | null;
-  vehicle: Vehicle | null;
 }

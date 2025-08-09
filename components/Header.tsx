@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { User } from '../types';
-import { LogoutIcon } from './icons';
+import { User } from '../types.js';
+import { LogoutIcon } from './icons.js';
 
 interface HeaderProps {
   user: User;

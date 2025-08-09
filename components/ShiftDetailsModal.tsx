@@ -1,7 +1,6 @@
-
 import React from 'react';
-import { ShiftWithDetails } from '../types';
-import { CalendarIcon, ClockIcon, RouteIcon, BusIcon, NoteIcon } from './icons';
+import { ShiftWithDetails } from '../types.js';
+import { CalendarIcon, ClockIcon, RouteIcon, BusIcon, NoteIcon } from './icons.js';
 
 interface ShiftDetailsModalProps {
   shift: ShiftWithDetails | null;
@@ -33,6 +32,12 @@ const ShiftDetailsModal: React.FC<ShiftDetailsModalProps> = ({ shift, onClose, s
     day: 'numeric',
     weekday: 'long',
   }).format(selectedDate);
+  
+  // ★ 時刻をフォーマットするヘルパー関数を追加
+  const formatTime = (time: string | null) => {
+    if (!time) return '';
+    return new Date(time).toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit', hour12: false });
+  };
 
   return (
     <div 
@@ -40,29 +45,34 @@ const ShiftDetailsModal: React.FC<ShiftDetailsModalProps> = ({ shift, onClose, s
         onClick={onClose}
     >
       <div 
-        className="bg-white rounded-2xl shadow-2xl w-full max-w-md mx-auto transform transition-all duration-300 ease-out scale-95 animate-in-modal"
+        className="bg-white rounded-2xl shadow-2xl w-full max-w-md mx-auto transform transition-all duration-300 ease-out"
         onClick={(e) => e.stopPropagation()}
-        style={{ animation: 'enter 0.3s forwards' }}
       >
         <div className="p-6">
             <div className="flex justify-between items-start">
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">シフト詳細</h2>
-                <button onClick={onClose} className="text-gray-400 hover:text-gray-600 transition">&times;</button>
+                <button onClick={onClose} className="text-gray-400 hover:text-gray-600 transition text-3xl leading-none">&times;</button>
             </div>
             
             <div className="space-y-2 divide-y divide-gray-200">
                 <DetailRow icon={<CalendarIcon className="w-6 h-6" />} label="日付" value={formattedDate} />
 
-                {shift.is_holiday ? (
+                {/* ★★★ 休日判定を shift.note === '休み' に変更 ★★★ */}
+                {shift.note === '休み' ? (
                     <div className="pt-4">
-                        <p className="text-center text-xl font-bold text-blue-600 py-8">本日程は休日です</p>
+                        <p className="text-center text-xl font-bold text-blue-600 py-8">本日程はお休みです</p>
                     </div>
                 ) : (
                     <>
-                        <DetailRow icon={<ClockIcon className="w-6 h-6" />} label="勤務時間" value={`${shift.start_time} - ${shift.end_time}`} />
-                        <DetailRow icon={<RouteIcon className="w-6 h-6" />} label="担当路線" value={shift.route?.name || '未割り当て'} />
-                        <DetailRow icon={<BusIcon className="w-6 h-6" />} label="車両番号" value={shift.vehicle?.vehicle_number || '未割り当て'} />
-                        <DetailRow icon={<NoteIcon className="w-6 h-6" />} label="備考" value={shift.note || '特記事項なし'} isNote={true} />
+                        {/* ★★★ プロパティ名を新しいスキーマに合わせる ★★★ */}
+                        <DetailRow icon={<ClockIcon className="w-6 h-6" />} label="勤務時間" value={`${formatTime(shift.startTime1)} - ${formatTime(shift.endTime1)}`} />
+                        <DetailRow icon={<RouteIcon className="w-6 h-6" />} label="路線 / 乗番" value={`${shift.route?.name || '未割り当て'} / ${shift.shiftNumber}`} />
+                        <DetailRow 
+                          icon={<NoteIcon className="w-6 h-6" />} 
+                          label="備考" 
+                          value={shift.note || '特記事項なし'} // noteは休日判定に使ったので、それ以外の情報が入る
+                          isNote={true} 
+                        />
                     </>
                 )}
             </div>
@@ -76,15 +86,7 @@ const ShiftDetailsModal: React.FC<ShiftDetailsModalProps> = ({ shift, onClose, s
             </button>
         </div>
       </div>
-       <style>{`
-            @keyframes enter {
-                from { opacity: 0; transform: scale(0.95); }
-                to { opacity: 1; transform: scale(1); }
-            }
-            .animate-in-modal {
-                animation: enter 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-            }
-        `}</style>
+       {/* アニメーション用のスタイルは削除しました（Tailwind CSSで代替可能） */}
     </div>
   );
 };

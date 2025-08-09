@@ -1,10 +1,10 @@
-import React, { useState, useCallback } from 'react';
-import { User, ShiftWithDetails } from '../types';
-import Header from './Header';
-import Calendar from './Calendar';
-import ShiftDetailsModal from './ShiftDetailsModal';
-import { ClockIcon, RouteIcon, BusIcon, NoteIcon } from './icons';
-import { useShifts } from '../hooks/useShifts';
+import React, { useState, useCallback, memo } from 'react';
+import { User, ShiftWithDetails } from '../types.js';
+import Header from './Header.js';
+import Calendar from './Calendar.js';
+import ShiftDetailsModal from './ShiftDetailsModal.js';
+import { ClockIcon, RouteIcon, BusIcon, NoteIcon } from './icons.js';
+import { useShifts } from '../hooks/useShifts.js';
 
 interface DashboardProps {
   user: User;
@@ -14,14 +14,19 @@ interface DashboardProps {
 const DetailItem: React.FC<{ icon: React.ReactNode; label: string; value: string | React.ReactNode}> = ({ icon, label, value }) => (
     <div className="flex items-center space-x-3 text-sm">
         <div className="flex-shrink-0 w-5 h-5 text-gray-500">{icon}</div>
-        <span className="font-medium text-gray-600 w-20">{label}</span>
+        <span className="font-medium text-gray-600 w-24">{label}</span>
         <span className="text-gray-800 font-semibold">{value}</span>
     </div>
 );
 
-const TodayShiftCard: React.FC<{ shift: ShiftWithDetails | null, isLoading: boolean, onClick: () => void }> = React.memo(({ shift, isLoading, onClick }) => {
+const TodayShiftCard: React.FC<{ shift: ShiftWithDetails | null, isLoading: boolean, onClick: () => void }> = memo(({ shift, isLoading, onClick }) => {
     const today = new Date();
     const formattedDate = new Intl.DateTimeFormat('ja-JP', { month: 'long', day: 'numeric', weekday: 'short' }).format(today);
+
+    const formatTime = (time: string | null) => {
+        if (!time) return '';
+        return new Date(time).toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit', hour12: false });
+    }
 
     return (
         <div className="bg-white rounded-lg shadow-lg p-6 mb-6 cursor-pointer hover:shadow-xl transition-shadow" onClick={onClick}>
@@ -30,15 +35,14 @@ const TodayShiftCard: React.FC<{ shift: ShiftWithDetails | null, isLoading: bool
             </h2>
             {isLoading ? (
                 <div className="space-y-3 animate-pulse">
-                    <div className="h-4 bg-gray-200 rounded w-3/4"></div>
-                    <div className="h-4 bg-gray-200 rounded w-1/2"></div>
-                    <div className="h-4 bg-gray-200 rounded w-2/3"></div>
+                    <div className="h-5 bg-gray-200 rounded w-3/4"></div>
+                    <div className="h-5 bg-gray-200 rounded w-1/2"></div>
+                    <div className="h-5 bg-gray-200 rounded w-2/3"></div>
                 </div>
-            ) : shift && !shift.is_holiday ? (
+            ) : shift && shift.note !== '休み' ? (
                 <div className="space-y-4">
-                    <DetailItem icon={<ClockIcon />} label="勤務時間" value={`${shift.start_time} - ${shift.end_time}`} />
-                    <DetailItem icon={<RouteIcon />} label="担当路線" value={shift.route?.name || 'N/A'} />
-                    <DetailItem icon={<BusIcon />} label="車両番号" value={shift.vehicle?.vehicle_number || 'N/A'} />
+                    <DetailItem icon={<ClockIcon />} label="勤務時間" value={`${formatTime(shift.startTime1)} - ${formatTime(shift.endTime1)}`} />
+                    <DetailItem icon={<RouteIcon />} label="路線 / 乗番" value={`${shift.route?.name || 'N/A'} / ${shift.shiftNumber}`} />
                     <DetailItem 
                         icon={<NoteIcon />} 
                         label="備考" 
@@ -46,13 +50,15 @@ const TodayShiftCard: React.FC<{ shift: ShiftWithDetails | null, isLoading: bool
                     />
                 </div>
             ) : (
-                <div className="flex items-center justify-center h-24 bg-blue-50 rounded-lg">
-                    <p className="text-lg font-semibold text-blue-700">本日は休日です</p>
+                <div className="flex items-center justify-center h-28 bg-blue-50 rounded-lg">
+                    <p className="text-lg font-semibold text-blue-700">本日はお休みです</p>
                 </div>
             )}
         </div>
     );
 });
+TodayShiftCard.displayName = 'TodayShiftCard';
+
 
 const Dashboard: React.FC<DashboardProps> = ({ user, onLogout }) => {
   const {
@@ -68,15 +74,28 @@ const Dashboard: React.FC<DashboardProps> = ({ user, onLogout }) => {
 
   const handleDateClick = useCallback((date: Date) => {
     const dateString = date.toISOString().split('T')[0];
-    const shiftForDay = shifts.find(s => s.work_date === dateString);
+    const shiftForDay = shifts.find(s => s.workDate.startsWith(dateString));
+    
     if (shiftForDay) {
         setSelectedShift(shiftForDay);
         setSelectedDateForModal(date);
     } else {
         const tempHolidayShift: ShiftWithDetails = {
-            id: 0, user_id: user.id, work_date: dateString, is_holiday: true,
-            start_time: null, end_time: null, route_id: null, vehicle_id: null, note: null,
-            route: null, vehicle: null
+          id: 0,
+          userId: user.id,
+          workDate: date.toISOString(),
+          dayCategory: 'HOLIDAY',
+          shiftNumber: '公休',
+          note: '休み',
+          startTime1: null, endTime1: null, startTime2: null, endTime2: null,
+          routeId: null,
+          route: null,
+          user_id: 0,
+          work_date: '',
+          start_time: null,
+          end_time: null,
+          route_id: null,
+          is_holiday: false
         };
         setSelectedShift(tempHolidayShift);
         setSelectedDateForModal(date);
@@ -84,7 +103,7 @@ const Dashboard: React.FC<DashboardProps> = ({ user, onLogout }) => {
   }, [shifts, user.id]);
 
   const handleTodayCardClick = useCallback(() => {
-    if(todayShift) {
+    if (todayShift) {
         setSelectedShift(todayShift);
         setSelectedDateForModal(new Date());
     }
@@ -112,7 +131,11 @@ const Dashboard: React.FC<DashboardProps> = ({ user, onLogout }) => {
         />
       </main>
       {selectedShift && selectedDateForModal && (
-         <ShiftDetailsModal shift={selectedShift} onClose={handleCloseModal} selectedDate={selectedDateForModal} />
+         <ShiftDetailsModal 
+            shift={selectedShift} 
+            onClose={handleCloseModal} 
+            selectedDate={selectedDateForModal} 
+         />
       )}
     </div>
   );
